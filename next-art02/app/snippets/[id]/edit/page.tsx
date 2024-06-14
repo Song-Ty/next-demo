@@ -14,7 +14,7 @@ console.log("%c🍍🍍🍍[ EditPage ] >>>","background:pink;color: red; font-w
     return (
         <div>
             <h1>
-                EditPage
+                EditPage{params.id}
             </h1>
         </div>
     )

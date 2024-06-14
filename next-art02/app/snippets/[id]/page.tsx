@@ -1,5 +1,6 @@
 import {notFound} from "next/navigation";
 import {db} from "@/utils/db"
+import Link from "next/link";
 
 // TODO: 动态路由组件 文件名称用[id]命名
 
@@ -26,7 +27,7 @@ export default async function SnippetsEditPage({params}:SnippetsEditPageProps) {
                    {snippet.title}
                </h3>
                <div className={"flex gap-4"}>
-                   <button className={"p-2 border rounded"}>编辑</button>
+                   <Link href={`/snippets/${snippet.id}/edit`} className={"p-2 border rounded"}>编辑</Link>
                    <button className={"p-2 border rounded"}>删除</button>
                </div>
            </div>
